@@ -1,0 +1,19 @@
+{
+  "name": "Anor Londo Castle",
+  "address": "Anor Londo 12",
+  "price": 50000000,
+  "codeInternal": "COD-00001",
+  "year": 2013,
+  "owner": {
+    "name": "Gwyn, High Lord of Sunlight and Ash",
+    "address": "First flame oven",
+    "phone": "3128745693",
+    "birthday": "1991-05-13T16:55:00.905Z"
+  },
+  "propertyTrace": {
+    "dateSale": null,
+    "name": "Tax",
+    "value": 5000000,
+    "tax": 10
+  }
+}

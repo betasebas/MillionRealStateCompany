@@ -1,0 +1,14 @@
+1. En la carpeta Útil se encuentran 3 archivos que se describen a continuación.
+	- Archivo MillionRealStateCompanyBk => Este el backup de la base de datos el cual contiene datos que se usaron para probar el API.
+	
+	- Archivo Query_Init.sql => Contiene un script para la creación de la base de datos. Este se creo por si el backup presenta problemas 	se pueda ejecutar sin problemas y tener la creación simple.
+	
+	- Archivo RealState.postman_collection.json => Es una colección de postman para los diferente servicios que solicita el ejercicio, de 	igual manera contiene los json que se requieren para las diferentes peticiones, en caso de usar postman la pagina inicial del api abre 	swagger (https://localhost:xxxx/swagger/index.html)
+
+2. Para la seguridad se uso algo muy simple con un JWT y un rol predeterminado muy simple. Los usuarios no tienen crud, por ende en el script y en bk la base de datos tiene un usuario "admin" predeterminado.
+
+UserName = admin
+Password = 26ad2ca0ede9ee0da7efd9f6572026dc5ad2de2d5d1395d08dc2267719fcbf3e  (admin123qwe)
+!!Importante: La contraseña tiene un simple hash de 256. La contraseña que deben enviar las pruebas es admin123qwe, se hizo como para dar un poco de vida al flujo de login.
+
+3. Versión del framework es .Net8

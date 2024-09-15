@@ -1,0 +1,36 @@
+[
+  {
+    "id": "a1f7518b-b2a9-4a5d-4168-08dcd5aef076",
+    "name": "Lothric Castle",
+    "address": "Lothric 128",
+    "price": 41000000,
+    "codeInternal": "COD-00002",
+    "year": 2016,
+    "enable": true,
+    "ownerId": "b6aecd56-a9ff-4949-1fd5-08dcd5aef085",
+    "owner": {
+      "id": "b6aecd56-a9ff-4949-1fd5-08dcd5aef085",
+      "name": "Princes Lorian and Lothric",
+      "address": "Lothric 120",
+      "phone": "312874574",
+      "birthday": "1995-07-13T16:55:00.907"
+    }
+  },
+  {
+    "id": "a1f7518b-b2a9-4a5d-4168-08dcd5aef076",
+    "name": "LoCastle",
+    "address": "Lothric 128",
+    "price": 41000000,
+    "codeInternal": "COD-00002",
+    "year": 2016,
+    "enable": true,
+    "ownerId": "b6aecd56-a9ff-4949-1fd5-08dcd5aef085",
+    "owner": {
+      "id": "b6aecd56-a9ff-4949-1fd5-08dcd5aef085",
+      "name": "Prines Lorian and Lothric",
+      "address": "Lotric 120",
+      "phone": "31287474",
+      "birthday": "1995-07-13T16:55:00.907"
+    }
+  }
+]

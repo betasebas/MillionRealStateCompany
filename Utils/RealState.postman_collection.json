@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "e462b92b-5225-41d9-8133-ca66a8aa12e8",
+		"name": "RealState",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37921296"
+	},
+	"item": [
+		{
+			"name": "Create Property Building",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Anor Londo Castle\",\r\n  \"address\": \"Anor Londo 12\",\r\n  \"price\": 50000000,\r\n  \"codeInternal\": \"COD-00001\",\r\n  \"year\": 2013,\r\n  \"owner\": {\r\n    \"name\": \"Gwyn, High Lord of Sunlight and Ash\",\r\n    \"address\": \"First flame oven\",\r\n    \"phone\": \"3128745693\",\r\n    \"birthday\": \"1991-05-13T16:55:00.905Z\"\r\n  },\r\n  \"propertyTrace\": {\r\n    \"dateSale\": null,\r\n    \"name\": \"Tax\",\r\n    \"value\": 5000000,\r\n    \"tax\": 10\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7284/api/v1.0/Property/CreateProperty"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Image from property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "PropertyId",
+							"value": "gdg",
+							"type": "text"
+						},
+						{
+							"key": "File",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": "https://localhost:7284/api/v1.0/PropertyImage/CreateImageProperty"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7284/api/v1.0/User/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Price",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIwNjI4OGM0Yy0yNTU3LTRjOGQtOGEyZS00MTBmM2Y2NGU2MDAiLCJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MjY0MzczMDMsImV4cCI6MTcyNjQ0MDkwMywiaWF0IjoxNzI2NDM3MzAzLCJpc3MiOiJodHRwczovL3Rlc3QtcmVzb3VyY2UuY29tIiwiYXVkIjoiaHR0cHM6Ly90ZXN0LXJlc291cmNlLmNvbSJ9.2oN4pNa4gRnuxh6ZtSOUomyhh_7OPuTjisOjB_-908s"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertyId\": \"B30D4D5B-FBFB-483C-4169-08DCD5AEF076\",\r\n  \"value\": 60000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7284/api/v1.0/Property/UpdatePriceProperty"
+			},
+			"response": []
+		},
+		{
+			"name": "Update property",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"name\": \"string\",\r\n  \"address\": \"string\",\r\n  \"price\": 0,\r\n  \"codeInternal\": \"string\",\r\n  \"year\": 0,\r\n  \"enable\": true,\r\n  \"ownerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7284/api/v1.0/Property/UpdateProperty"
+			},
+			"response": []
+		},
+		{
+			"name": "List property with filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7284/api/v1.0/Property/GetProperties?NameFilter&MaxPriceFilter&MinPriceFilter&MaxYearFilter&MinYearFilter&EnableFilter&NameOwnerFilter",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7284",
+					"path": [
+						"api",
+						"v1.0",
+						"Property",
+						"GetProperties"
+					],
+					"query": [
+						{
+							"key": "NameFilter",
+							"value": null
+						},
+						{
+							"key": "MaxPriceFilter",
+							"value": null
+						},
+						{
+							"key": "MinPriceFilter",
+							"value": null
+						},
+						{
+							"key": "MaxYearFilter",
+							"value": null
+						},
+						{
+							"key": "MinYearFilter",
+							"value": null
+						},
+						{
+							"key": "EnableFilter",
+							"value": null
+						},
+						{
+							"key": "NameOwnerFilter",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
